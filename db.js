@@ -49,7 +49,7 @@ const Data = conn.define("data", {
 
 const syncAndSeed = async () => {
   await conn.sync({ force: true });
-  await data.map((bookmark) => Data.create({ bookmark }));
+  await data.map((bookmark) => Data.create(bookmark));
 };
 
 module.exports = { syncAndSeed, conn, models: { Data } };

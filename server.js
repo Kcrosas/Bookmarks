@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
 const db = require("./db");
-//const { conn, syncAndSeed, data} = db;
 const data = db.models.Data;
 
+//Defaults to bookmarks
 app.get("/", async (req, res, next) => {
   res.redirect("/bookmarks");
 });
